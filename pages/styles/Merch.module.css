@@ -1,0 +1,55 @@
+.merchHero{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.merchHeroText{
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    max-width: 1120px;
+    text-align: center;
+    padding-top: 0%;
+    font-size: 32px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: none;
+    color: #f5f5f5;
+}
+.merchHeroBg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../public/merch.jpeg");
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../public/merch.jpeg");
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    filter: blur(11px);
+}
+
+.merchSection2{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paragraph{
+    display: block;
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.highlight{
+    color: #f8c63c;
+}
