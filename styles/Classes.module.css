@@ -37,7 +37,7 @@
 .classesContentHeading{
     font-size: 36px;
     line-height: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     padding-top: 20px;
     text-align: center;
     margin-top: 0px;
@@ -48,7 +48,7 @@
     width: 100%;
     max-width: 1120px;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
