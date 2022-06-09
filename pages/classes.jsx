@@ -2,6 +2,7 @@ import Navigation from "./Navigation"
 import Form from "./Form"
 import Footer from "./Footer"
 import styles from "../styles/Classes.module.css"
+import Head from 'next/head'
 
 export default function Classes(){
     return (
@@ -49,6 +50,11 @@ export default function Classes(){
             </div>
             {/* Classes data and Content both end here*/}
             <Form heading="Contact The Garage to know more about classes offered."/>
+            <Head>
+                <title>Classes | The Garage of Silicon Valley</title>
+                <meta name="description" content="The Garage of Silicon Valley" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Footer />
         </div>
     )

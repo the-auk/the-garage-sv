@@ -1,6 +1,7 @@
 import Navigation from "./Navigation"
 import Footer from "./Footer"
 import styles from "../styles/Merch.module.css"
+import Head from 'next/head'
 
 export default function Merch(){
     return(
@@ -22,6 +23,11 @@ export default function Merch(){
                 for more merch and shop updates.
                 </div>
             </div>
+            <Head>
+                <title>Merch | The Garage of Silicon Valley</title>
+                <meta name="description" content="The Garage of Silicon Valley" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Footer />
         </div>
     )

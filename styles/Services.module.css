@@ -38,3 +38,22 @@
     text-transform: none;
     color: #f5f5f5;
 }
+
+@media only screen and (max-width: 600px) {
+    .classes_Hero{
+        background-size: cover;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+    }
+    .classesHeroContent{
+        width: 100%;
+        font-weight: 500;
+        text-transform: none;
+        position: relative;
+        z-index: 2;
+        font-size: 24px;
+        line-height: 30px;
+        padding: 10px;
+    }
+}

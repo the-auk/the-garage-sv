@@ -25,6 +25,7 @@
     background-position: 0px 0px, 0px 0px, 0% 50%;
     background-size: auto, auto, 120%;
     color: #fff;
+
 }
 .intro_cc{
     width: 64%;
@@ -47,4 +48,31 @@
     font-size: 50px;
     line-height: 105px;
     font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero{
+        background-size: cover;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+    }
+    .heading_jumbo{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 0%;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: 500;
+        text-transform: none;
+    }
+    .svheading{
+        position: relative;
+        z-index: 2;
+        color: #f8c63c;
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: 700;
+    }
 }

@@ -100,3 +100,22 @@
     text-transform: none;
     color: #f5f5f5;
 }
+
+@media only screen and (max-width: 600px) {
+    .galleryHero{
+        background-size: cover;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+        margin-bottom: 60px;
+    }
+    .galleryHeroText{
+        font-size: 28px;
+        line-height: 40px;
+        padding-bottom: 25px;
+        padding-top: 30px;
+        text-align: center;
+        margin-top: 0px;
+        color: #f5f5f5;
+        font-weight: 600;
+    }
+}

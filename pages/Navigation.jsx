@@ -1,9 +1,28 @@
 import styles from '../styles/Navigation.module.css'
-import {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function Home() {
   const [showDropdown, setShowDropdown] = useState(false);
-  
+  const [showMenu, setShowMenu] = useState(true);
+  useEffect(()=>{
+    function handleResize(){
+      if(window.innerWidth<=600){
+        setShowDropdown(false);
+        setShowMenu(true);
+      }
+      else{
+        setShowMenu(true);
+        setShowDropdown(false);
+      }
+    }
+    window.addEventListener('resize', handleResize);
+
+  });
+
+  const handleDropMenu = () => {
+    setShowMenu(!showMenu)
+  }
+
   const handleClick = () =>{
     setShowDropdown(!showDropdown);
   }
@@ -15,15 +34,20 @@ export default function Home() {
   return (
     <div className={styles.navigation}>
       <div className={styles.navigation_wrap}>
-          <a href='/'><div className={styles.logo_link}>
-          <img className={styles.logo_image} src="/garage_logo.png" alt="The Garage's Logo" />
-          </div>
+          <a href='/'>
+            <div className={styles.logo_link}>
+            <img className={styles.logo_image} src="/garage_logo.png" alt="The Garage's Logo" />
+            </div>
           </a>
+          <div onClick={handleDropMenu} className={styles.menuButton}>
+              <div className={styles.longLine}></div>
+              <div className={styles.shortLine}></div>
+            </div>
           <div className={styles.menu}>
-          <div className={styles.navigation_items}>
-              <div className={styles.navitemwrap} onMouseLeave={handleClick} onMouseEnter={handleClick}>
-              {Dropdown}
-                    <button className={styles.navigation_item}>SERVICES</button></div>
+          <div className={!showMenu? `${styles["navigation_items"]}`: `${styles["navigation_items"]} ${styles["nav_items_hidden"]}`}>
+              <div className={styles.navitemwrap}  onClick={handleClick} onMouseLeave={handleClick} onMouseEnter={handleClick}>
+                    <button className={styles.navigation_item}>SERVICES</button>
+                    {Dropdown}</div>
                     <a href="/classes" className={styles.navigation_item}>Classes</a> 
                     <a href="/gallery" className={styles.navigation_item}>GALLERY</a>
                     <a href="/merch" className={styles.navigation_item}>MERCH</a>

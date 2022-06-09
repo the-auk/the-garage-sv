@@ -13,7 +13,7 @@ const message = `
   Inquiry: ${body.inquiry}
 `;
 mail.send({
-  to: 'siwachtanmayus@gmail.com',
+  to: 'info@thegaragesv.com',
   from: 'info@thegaragesv.com',
   subject: 'New Form Submission',
   text: message,

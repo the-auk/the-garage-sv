@@ -44,7 +44,7 @@ export default function SliderSection(){
         </div> */}
             <Footer />
             <Head>
-            <title>The Garage of Silicon Valley</title>
+            <title> Gallery | The Garage of Silicon Valley</title>
             <meta name="description" content="The Garage of Silicon Valley" />
             <link rel="icon" href="/favicon.ico" />
             </Head>
