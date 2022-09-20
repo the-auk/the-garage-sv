@@ -22,7 +22,9 @@ export default function Home() {
   const handleDropMenu = () => {
     setShowMenu(!showMenu)
   }
-
+  const handleLeave =() =>{
+    setShowDropdown(false);
+  }
   const handleClick = () =>{
     setShowDropdown(!showDropdown);
   }
@@ -45,7 +47,7 @@ export default function Home() {
             </div>
           <div className={styles.menu}>
           <div className={!showMenu? `${styles["navigation_items"]}`: `${styles["navigation_items"]} ${styles["nav_items_hidden"]}`}>
-              <div className={styles.navitemwrap}  onClick={handleClick} onMouseLeave={handleClick} onMouseEnter={handleClick}>
+              <div className={styles.navitemwrap}  onClick={handleClick} onMouseLeave={handleLeave} onMouseEnter={handleClick}>
                     <button className={styles.navigation_item}>SERVICES</button>
                     {Dropdown}</div>
                     <a href="/classes" className={styles.navigation_item}>Classes</a> 

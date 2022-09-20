@@ -2,39 +2,45 @@ import React, {Component, useState, useRef} from 'react'
 import styles from "../styles/SliderSection.module.css"
 import Slider from "./Slider"
 import { bikeList } from "../components/Bikelist"
+import {galleryList} from "../components/GalleryList"
 import Navigation from "./Navigation"
 import Footer from "./Footer"
 import Head from 'next/head'
 
 export default function SliderSection(){
-    const [beforeBike, setBeforeBike] = useState(bikeList[0].beforeImg);
-    const [afterBike, setAfterBike] = useState(bikeList[0].afterImg);
-    const [active, setActive] = useState(1);
+    // const [beforeBike, setBeforeBike] = useState(bikeList[0].beforeImg);
+    // const [afterBike, setAfterBike] = useState(bikeList[0].afterImg);
+    // const [active, setActive] = useState(1);
 
-    const ChangeHandler = (event) =>{
-        setActive(event.target.getAttribute('id'));
-        var bikeid=event.target.getAttribute('id');
-        bikeList.forEach((el)=>{
-            if(el.key==bikeid){
-                setBeforeBike(el.beforeImg)
-                setAfterBike(el.afterImg)
-            }
-        });
-    }
+    // const ChangeHandler = (event) =>{
+    //     setActive(event.target.getAttribute('id'));
+    //     var bikeid=event.target.getAttribute('id');
+    //     bikeList.forEach((el)=>{
+    //         if(el.key==bikeid){
+    //             setBeforeBike(el.beforeImg)
+    //             setAfterBike(el.afterImg)
+    //         }
+    //     });
+    // }
 
-    const renderList = bikeList.map((bike) => 
-    <button key={bike.key} id={bike.key} className={active==bike.key ? styles.activebutton : styles.bikebutton} 
-    onClick={ChangeHandler}>{bike.name}</button>);
+    // const renderList = bikeList.map((bike) => 
+    // <button key={bike.key} id={bike.key} className={active==bike.key ? styles.activebutton : styles.bikebutton} 
+    // onClick={ChangeHandler}>{bike.name}</button>);
+
+    const renderList = galleryList.map((bike)=> 
+        <img id={bike.key} src={bike.src} className={styles.galleryImg} />
+    );
+
 
     return(
         <div className={styles.contentwrapper}>
             <Navigation />
-            <div className={styles.galleryHero}>
+            {/* <div className={styles.galleryHero}>
                 <div className={styles.galleryHeroText}>
                     Coming Soon...
                 </div>
             </div> 
-        {/* <div className={styles.slidersectionwrapper}>
+        <div className={styles.slidersectionwrapper}>
             <div className={styles.sliderlist}>
             {renderList}
             </div>
@@ -42,6 +48,10 @@ export default function SliderSection(){
                 <Slider beforeimg={beforeBike} afterimg={afterBike} />
             </div>
         </div> */}
+            <div className={styles.masonry}>
+                {renderList}
+            </div>
+
             <Footer />
             <Head>
             <title> Gallery | The Garage of Silicon Valley</title>

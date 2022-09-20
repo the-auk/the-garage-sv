@@ -10,12 +10,15 @@ const message = `
   Name: ${body.name}\r\n
   Email: ${body.email}\r\n
   Number: ${body.number}\r\n
+  Make: ${body.make}\r\n
+  Model: ${body.model}\r\n
+  Year: ${body.year}\r\n
   Inquiry: ${body.inquiry}
 `;
 mail.send({
   to: 'info@thegaragesv.com',
   from: 'info@thegaragesv.com',
-  subject: 'New Form Submission',
+  subject: 'New Form Submission on Website',
   text: message,
   html: message.replace(/\r\n/g, '<br>' )
 }).then(() => {

@@ -100,8 +100,27 @@
     text-transform: none;
     color: #f5f5f5;
 }
+.masonry{
+    box-sizing: border-box;
+    columns: 4;
+    gap: 10px;
+    margin: 10px;
+}
+.galleryImg{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
+@media only screen and (max-width:900px){
+    .masonry{
+        columns: 3;
+    }  
+}
 @media only screen and (max-width: 600px) {
+    .masonry{
+        columns: 2;
+    } 
     .galleryHero{
         background-size: cover;
         overflow-x: hidden;
