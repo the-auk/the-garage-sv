@@ -22,7 +22,12 @@
     flex-wrap: wrap;
     overflow-x: hidden;
 }
-
+.floatwrapper{
+    width: 45%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+}
 .floatLabel{
   width: 45%;  
   min-width: 400px;
@@ -31,7 +36,11 @@
   margin: 10px 10px;
   position: relative;
 }
-
+.second{
+    width: 33.3%;
+    min-width: 10px;
+    margin: 0px 0px;
+}
 .floatLabel input{
     width: 100%;
     min-height: 56px;
@@ -124,9 +133,19 @@
         width: 90%;
         height: auto;
     }
+    .floatwrapper{
+        width: 100%;
+        min-width: 400px;
+        display: flex;
+        flex-direction: row;
+    }
+    .second{
+        width: 33.3%;
+        min-width: 10px;
+        margin: 0px 0px;
+    }
     .floatLabel{
         width: 100%;  
-        min-width: 100px;
         display: flex;
         flex-direction: column;
         margin: 10px 0px;

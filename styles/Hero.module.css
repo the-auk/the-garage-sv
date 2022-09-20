@@ -4,7 +4,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 80vh;
+    height: calc( 100vh - 250px );
     margin-bottom: 100px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -22,8 +22,8 @@
     background-color: #f4f4f4;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), -webkit-gradient(linear, left top, right top, color-stop(15%, #000), color-stop(50%, rgba(0, 0, 0, 0.5)), to(transparent)), url("../public/introbg.jpeg");
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(90deg, #000 15%, rgba(0, 0, 0, 0.5) 50%, transparent), url("../public/introbg.jpeg");
-    background-position: 0px 0px, 0px 0px, 0% 50%;
-    background-size: auto, auto, 120%;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
 
 }
@@ -56,6 +56,7 @@
         overflow-x: hidden;
         background-repeat: no-repeat;
         margin-bottom: 60px;
+        height: calc( 100vh - 200px);
     }
     .heading_jumbo{
         width: 100%;
